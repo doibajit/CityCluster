@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2019.2">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="66" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\dmedhi\Downloads\Med-Project\Third-DS-Geo-DistFromMoscow-9Cluster.xlsx|||`DistanceWithClusters$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Third-DS-Geo-DistFromMoscow-9Cluster.xlsx
+Table=`DistanceWithClusters$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Category" size="255" source="File: C:\Users\dmedhi\Downloads\Med-Project\Third-DS-Geo-DistFromMoscow-9Cluster.xlsx|||`DistanceWithClusters$`" type="V_String" />
+            <Field name="ClusterID" source="File: C:\Users\dmedhi\Downloads\Med-Project\Third-DS-Geo-DistFromMoscow-9Cluster.xlsx|||`DistanceWithClusters$`" type="Double" />
+            <Field name="City" size="255" source="File: C:\Users\dmedhi\Downloads\Med-Project\Third-DS-Geo-DistFromMoscow-9Cluster.xlsx|||`DistanceWithClusters$`" type="V_String" />
+            <Field name="Hospital Name" size="255" source="File: C:\Users\dmedhi\Downloads\Med-Project\Third-DS-Geo-DistFromMoscow-9Cluster.xlsx|||`DistanceWithClusters$`" type="V_String" />
+            <Field name="Distance.in.KMs" source="File: C:\Users\dmedhi\Downloads\Med-Project\Third-DS-Geo-DistFromMoscow-9Cluster.xlsx|||`DistanceWithClusters$`" type="Double" />
+            <Field name="Sum.PCI.2014.Fact" source="File: C:\Users\dmedhi\Downloads\Med-Project\Third-DS-Geo-DistFromMoscow-9Cluster.xlsx|||`DistanceWithClusters$`" type="Double" />
+            <Field name="Sum.PCI.2015.Fact" source="File: C:\Users\dmedhi\Downloads\Med-Project\Third-DS-Geo-DistFromMoscow-9Cluster.xlsx|||`DistanceWithClusters$`" type="Double" />
+            <Field name="Sum.Forecast.2015.2Q" source="File: C:\Users\dmedhi\Downloads\Med-Project\Third-DS-Geo-DistFromMoscow-9Cluster.xlsx|||`DistanceWithClusters$`" type="Double" />
+            <Field name="Sum.Forecast.2015..4Q" source="File: C:\Users\dmedhi\Downloads\Med-Project\Third-DS-Geo-DistFromMoscow-9Cluster.xlsx|||`DistanceWithClusters$`" type="Double" />
+            <Field name="Latitude" source="File: C:\Users\dmedhi\Downloads\Med-Project\Third-DS-Geo-DistFromMoscow-9Cluster.xlsx|||`DistanceWithClusters$`" type="Double" />
+            <Field name="Longitude" source="File: C:\Users\dmedhi\Downloads\Med-Project\Third-DS-Geo-DistFromMoscow-9Cluster.xlsx|||`DistanceWithClusters$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="66" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\dmedhi\Downloads\Med-Project\SalesRepPerCluster.csv</File>
+          <FormatSpecificOptions>
+            <CodePage>28591</CodePage>
+            <Delimeter>,</Delimeter>
+            <IgnoreErrors>False</IgnoreErrors>
+            <FieldLen>254</FieldLen>
+            <AllowShareWrite>False</AllowShareWrite>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>SalesRepPerCluster.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ClusterID" size="254" source="File: C:\Users\dmedhi\Downloads\Med-Project\SalesRepPerCluster.csv" type="V_String" />
+            <Field name="Count of Distinct Hospitals(per Cluster)" size="254" source="File: C:\Users\dmedhi\Downloads\Med-Project\SalesRepPerCluster.csv" type="V_String" />
+            <Field name="Count of Distinct Cities(per Cluster)" size="254" source="File: C:\Users\dmedhi\Downloads\Med-Project\SalesRepPerCluster.csv" type="V_String" />
+            <Field name="Number of Sales Reps" size="254" source="File: C:\Users\dmedhi\Downloads\Med-Project\SalesRepPerCluster.csv" type="V_String" />
+            <Field name="Percent of Hospitals(per Cluster)" size="254" source="File: C:\Users\dmedhi\Downloads\Med-Project\SalesRepPerCluster.csv" type="V_String" />
+            <Field name="Percent of PCI (FactByForecast)-(per cluster)" size="254" source="File: C:\Users\dmedhi\Downloads\Med-Project\SalesRepPerCluster.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="174" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="282" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="if [ClusterID] = 1 THEN 1&#xA;&#xA;elseif [ClusterID]  =2 THEN 1&#xA;&#xA;elseif [ClusterID] =3  THEN 3&#xA;&#xA;elseif [ClusterID] =4  THEN 1&#xA;&#xA;elseif [ClusterID] =5  THEN 2&#xA;&#xA;elseif [ClusterID] =6  THEN 6&#xA;&#xA;elseif [ClusterID] =7  THEN 4&#xA;&#xA;elseif [ClusterID] =8  THEN 3&#xA;&#xA;elseif [ClusterID] =9  THEN 4&#xA;&#xA;else &quot;ERROR&quot;&#xA;ENDIF" field="Num_SalesRep" size="64" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Num_SalesRep = if [ClusterID] = 1 THEN 1
+
+elseif [ClusterID]  =2 THEN 1
+
+elseif ...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="186" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Number of Sales Reps" selected="True" />
+            <SelectField field="ClusterID" selected="True" />
+            <SelectField field="Count of Distinct Hospitals(per Cluster)" selected="True" />
+            <SelectField field="Count of Distinct Cities(per Cluster)" selected="True" />
+            <SelectField field="Percent of Hospitals(per Cluster)" selected="True" />
+            <SelectField field="Percent of PCI (FactByForecast)-(per cluster)" selected="True" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="402" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dmedhi\AppData\Local\Temp\Engine_32352_dd9561993f20451f9316ac2472836181_\Engine_3844_ce21f5577ff74234b2fcb357610892d4_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="510" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="25" MaxRecords="">C:\Users\dmedhi\Downloads\Med-Project\Third-DS-Geo-DistFromMoscow-9Cluster-SalesRep.xlsx|||Cluster-SalesReps</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>RemoveFile</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Third-DS-Geo-DistFromMoscow-9Cluster-SalesRep.xlsx
+Table=Cluster-SalesReps</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="402" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Num_SalesRep" selected="True" type="Double" size="8" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Sales Rep per Cluster</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

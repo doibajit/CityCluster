@@ -1,0 +1,752 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2019.2">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\dmedhi\Downloads\Med-Project\Second-DS-withGeo-WithDistanceFromMoscow.xlsx|||`GeoWithDistanceFromMoscow$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Second-DS-withGeo-WithDistanceFromMoscow.xlsx
+Table=`GeoWithDistanceFromMoscow$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Category" size="255" source="File: C:\Users\dmedhi\Downloads\Med-Project\Second-DS-withGeo-WithDistanceFromMoscow.xlsx|||`GeoWithDistanceFromMoscow$`" type="V_String" />
+            <Field name="City " size="255" source="File: C:\Users\dmedhi\Downloads\Med-Project\Second-DS-withGeo-WithDistanceFromMoscow.xlsx|||`GeoWithDistanceFromMoscow$`" type="V_String" />
+            <Field name="Hospital Name" size="255" source="File: C:\Users\dmedhi\Downloads\Med-Project\Second-DS-withGeo-WithDistanceFromMoscow.xlsx|||`GeoWithDistanceFromMoscow$`" type="V_String" />
+            <Field name="Sum PCI 2014 Fact" source="File: C:\Users\dmedhi\Downloads\Med-Project\Second-DS-withGeo-WithDistanceFromMoscow.xlsx|||`GeoWithDistanceFromMoscow$`" type="Double" />
+            <Field name="Sum PCI 2015 Fact" source="File: C:\Users\dmedhi\Downloads\Med-Project\Second-DS-withGeo-WithDistanceFromMoscow.xlsx|||`GeoWithDistanceFromMoscow$`" type="Double" />
+            <Field name="Sum Forecast 2015-2Q" source="File: C:\Users\dmedhi\Downloads\Med-Project\Second-DS-withGeo-WithDistanceFromMoscow.xlsx|||`GeoWithDistanceFromMoscow$`" type="Double" />
+            <Field name="Sum Forecast 2015--4Q" source="File: C:\Users\dmedhi\Downloads\Med-Project\Second-DS-withGeo-WithDistanceFromMoscow.xlsx|||`GeoWithDistanceFromMoscow$`" type="Double" />
+            <Field name="Latitude" source="File: C:\Users\dmedhi\Downloads\Med-Project\Second-DS-withGeo-WithDistanceFromMoscow.xlsx|||`GeoWithDistanceFromMoscow$`" type="Double" />
+            <Field name="Longitude" source="File: C:\Users\dmedhi\Downloads\Med-Project\Second-DS-withGeo-WithDistanceFromMoscow.xlsx|||`GeoWithDistanceFromMoscow$`" type="Double" />
+            <Field name="Distance in KMs" source="File: C:\Users\dmedhi\Downloads\Med-Project\Second-DS-withGeo-WithDistanceFromMoscow.xlsx|||`GeoWithDistanceFromMoscow$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings>
+        <Position x="246" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="List Box (11)">"Hospital Name"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">True</Value>
+          <Value name="Check Box (122)">True</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">True</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="342" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Category" selected="True" />
+            <SelectField field="City " selected="True" />
+            <SelectField field="Hospital Name" selected="True" />
+            <SelectField field="Sum_ACS PCIs 2014 FFOMS (fact)" selected="False" rename="PCI 2014 Fact" />
+            <SelectField field="Sum_ACS PCIs 2015 FFOMS (fact, for 11 months)" selected="False" rename="PCI 2015 Fact-11" />
+            <SelectField field="Sum_ACS PCIs 2015 FFOMS (forecast 2Q2015)" selected="False" />
+            <SelectField field="Sum_ACS PCIs 2015 FFOMS (forecast 4Q2015)" selected="False" />
+            <SelectField field="City" selected="True" />
+            <SelectField field="ClusterID" selected="False" />
+            <SelectField field="Sum_ACS.PCIs.2014.FFOMS..fact." selected="True" rename="PCI 2014 Fact" type="Double" size="8" />
+            <SelectField field="Sum_ACS.PCIs.2015.FFOMS..forecast.2Q2015." selected="True" type="Double" size="8" />
+            <SelectField field="Sum_ACS.PCIs.2015.FFOMS..forecast.4Q2015." selected="True" type="Double" size="8" />
+            <SelectField field="Sum_ACS.PCIs.2015.FFOMS..fact..for.11.months." selected="True" rename="PCI 2015 Fact_11M" type="Double" size="8" />
+            <SelectField field="Distance" selected="True" type="Double" size="8" />
+            <SelectField field="Sum PCI 2014 Fact" selected="True" />
+            <SelectField field="Sum PCI 2015 Fact" selected="True" />
+            <SelectField field="Sum Forecast 2015-2Q" selected="True" />
+            <SelectField field="Sum Forecast 2015--4Q" selected="True" />
+            <SelectField field="Latitude" selected="True" />
+            <SelectField field="Longitude" selected="True" />
+            <SelectField field="Distance in KMs" selected="True" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings>
+        <Position x="450" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="the fields" />
+          <Value name="standardize">True</Value>
+          <Value name="z score">True</Value>
+          <Value name="unit interval">False</Value>
+          <Value name="k-means">False</Value>
+          <Value name="k-medians">True</Value>
+          <Value name="neural gas">False</Value>
+          <Value name="min clus">4</Value>
+          <Value name="max clus">14</Value>
+          <Value name="bootstrap rep">50</Value>
+          <Value name="num seeds">10</Value>
+          <Value name="inches">True</Value>
+          <Value name="in.w">5.50</Value>
+          <Value name="in.h">5.50</Value>
+          <Value name="centimeters">False</Value>
+          <Value name="cm.w">13.00</Value>
+          <Value name="cm.h">14.95</Value>
+          <Value name="graph.resolution">1x</Value>
+          <Value name="pointsize">10</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\K-Centroids_Diagnostics.yxmc" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="546" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dmedhi\AppData\Local\Temp\Engine_26252_8a3b05affb7d43049c857dce140f4d33_\Engine_3844_c4426d15d51b424f9640c17bdc822f6a_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings>
+        <Position x="438" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="model name">CityCluster</Value>
+          <Value name="the fields">Sum PCI 2014 Fact + Sum PCI 2015 Fact + Distance in KMs</Value>
+          <Value name="standardize">True</Value>
+          <Value name="z score">True</Value>
+          <Value name="unit interval">False</Value>
+          <Value name="k-means">False</Value>
+          <Value name="k-medians">True</Value>
+          <Value name="neural gas">False</Value>
+          <Value name="num clus">9</Value>
+          <Value name="num seeds">10</Value>
+          <Value name="plot points">True</Value>
+          <Value name="plot centroids">False</Value>
+          <Value name="max comp">2</Value>
+          <Value name="inches">True</Value>
+          <Value name="in.w">5.50</Value>
+          <Value name="in.h">5.50</Value>
+          <Value name="centimeters">False</Value>
+          <Value name="cm.w">13.00</Value>
+          <Value name="cm.h">14.95</Value>
+          <Value name="graph.resolution">1x</Value>
+          <Value name="pointsize">10</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="grp" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="out" size="1073741823" source="R-DATA:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Reports">
+          <RecordInfo>
+            <Field name="Desc" size="64" source="Formula: (Multiple Sources)" type="V_WString" />
+            <Field name="Report" size="1073741823" source="Report: (Multiple Sources)" type="V_WString" />
+            <Field name="Sum_Dists" size="1073741823" source="R-DATA:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\K-Centroids_Cluster_Analysis.yxmc" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="570" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dmedhi\AppData\Local\Temp\Engine_26252_8a3b05affb7d43049c857dce140f4d33_\Engine_3844_4ef230f21b004ef4b8263488f3ce0184_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings>
+        <Position x="570" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="clus name">ClusterID</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Category" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="City." size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Hospital.Name" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Sum.PCI.2014.Fact" source="R-DATA:" type="Double" />
+            <Field name="Sum.PCI.2015.Fact" source="R-DATA:" type="Double" />
+            <Field name="Sum.Forecast.2015.2Q" source="R-DATA:" type="Double" />
+            <Field name="Sum.Forecast.2015..4Q" source="R-DATA:" type="Double" />
+            <Field name="Latitude" source="R-DATA:" type="Double" />
+            <Field name="Longitude" source="R-DATA:" type="Double" />
+            <Field name="Distance.in.KMs" source="R-DATA:" type="Double" />
+            <Field name="ClusterID" source="R-DATA:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\Append_Cluster.yxmc" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="666" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Sum_ACS.PCIs.2014.FFOMS..fact." selected="True" />
+            <SelectField field="Sum_ACS.PCIs.2015.FFOMS..forecast.2Q2015." selected="True" />
+            <SelectField field="Sum_ACS.PCIs.2015.FFOMS..forecast.4Q2015." selected="True" />
+            <SelectField field="Sum_ACS.PCIs.2015.FFOMS..fact..for.11.months." selected="True" />
+            <SelectField field="ClusterID" selected="True" />
+            <SelectField field="Category" selected="True" />
+            <SelectField field="City." selected="True" />
+            <SelectField field="Hospital.Name" selected="True" />
+            <SelectField field="PCI.2014.Fact" selected="True" />
+            <SelectField field="PCI.2015.Fact.11" selected="True" />
+            <SelectField field="Sum.PCI.2014.Fact" selected="True" />
+            <SelectField field="Sum.PCI.2015.Fact" selected="True" />
+            <SelectField field="Sum.Forecast.2015.2Q" selected="True" />
+            <SelectField field="Sum.Forecast.2015..4Q" selected="True" />
+            <SelectField field="Latitude" selected="True" />
+            <SelectField field="Longitude" selected="True" />
+            <SelectField field="Distance.in.KMs" selected="True" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="750" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="ClusterID" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>ClusterID - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1110" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dmedhi\AppData\Local\Temp\Engine_26252_8a3b05affb7d43049c857dce140f4d33_\Engine_3844_bf387eafd4c74cf797b4c5aa8e70c04d_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="162" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>!IsNull([City ])</Expression>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNotNull</Operator>
+            <Field><![CDATA[City ]]></Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2019-06-22 18:31:53</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2019-06-22 18:31:53</StartDate>
+              <EndDate>2019-06-22 18:31:53</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsNull([City ])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="858" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="City." selected="True" rename="City" />
+            <SelectField field="Category" selected="True" />
+            <SelectField field="ClusterID" selected="True" />
+            <SelectField field="Sum_ACS.PCIs.2014.FFOMS..fact." selected="False" />
+            <SelectField field="Sum_ACS.PCIs.2015.FFOMS..forecast.2Q2015." selected="False" />
+            <SelectField field="Sum_ACS.PCIs.2015.FFOMS..forecast.4Q2015." selected="False" />
+            <SelectField field="Sum_ACS.PCIs.2015.FFOMS..fact..for.11.months." selected="False" />
+            <SelectField field="Hospital.Name" selected="True" rename="Hospital Name" />
+            <SelectField field="PCI.2014.Fact" selected="False" />
+            <SelectField field="PCI.2015.Fact.11" selected="False" />
+            <SelectField field="Sum.PCI.2014.Fact" selected="True" />
+            <SelectField field="Sum.PCI.2015.Fact" selected="True" />
+            <SelectField field="Sum.Forecast.2015.2Q" selected="True" />
+            <SelectField field="Sum.Forecast.2015..4Q" selected="True" />
+            <SelectField field="Latitude" selected="True" />
+            <SelectField field="Longitude" selected="True" />
+            <SelectField field="Distance.in.KMs" selected="True" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1326" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="25" MaxRecords="">C:\Users\dmedhi\Downloads\Med-Project\Third-DS-Geo-DistFromMoscow-9Cluster.xlsx|||DistanceWithClusters</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <AppendMap>
+              <AppendMapping mode="Custom">
+                <Field Source="City" Dest="City." />
+                <Field Source="Category" Dest="Category" />
+                <Field Source="ClusterID" Dest="ClusterID" />
+                <Field Source="Sum_ACS.PCIs.2014.FFOMS..fact." Dest="Sum_ACS.PCIs.2014.FFOMS..fact." />
+                <Field Source="Sum_ACS.PCIs.2015.FFOMS..forecast.2Q2015." Dest="Sum_ACS.PCIs.2015.FFOMS..forecast.2Q2015." />
+                <Field Source="Sum_ACS.PCIs.2015.FFOMS..forecast.4Q2015." Dest="Sum_ACS.PCIs.2015.FFOMS..forecast.4Q2015." />
+                <Field Source="Sum_ACS.PCIs.2015.FFOMS..fact..for.11.months." Dest="Sum_ACS.PCIs.2015.FFOMS..fact..for.11.months." />
+                <Field Source="Hospital Name" Dest="Hospital.Name" />
+              </AppendMapping>
+            </AppendMap>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>RemoveFile</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Third-DS-Geo-DistFromMoscow-9Cluster.xlsx
+Table=DistanceWithClusters</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="918" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="ClusterID" action="GroupBy" rename="ClusterID" />
+            <SummarizeField field="City" action="Count" rename="Count" />
+            <SummarizeField field="Hospital Name" action="CountDistinct" rename="CountDistinct_Hospital Name" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1002" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dmedhi\AppData\Local\Temp\Engine_26252_8a3b05affb7d43049c857dce140f4d33_\Engine_3844_06da046984db4995af28d36eba86f796_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1182" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="Distance.in.KMs" order="Ascending" />
+            <Field field="City" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Distance.in.KMs - Ascending
+City - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1326" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dmedhi\AppData\Local\Temp\Engine_26252_8a3b05affb7d43049c857dce140f4d33_\Engine_3844_bc5dd1b8f73d4252898b5e753b05f692_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="858" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\dmedhi\AppData\Local\Temp\Engine_26252_8a3b05affb7d43049c857dce140f4d33_\Engine_3844_1c7df46066bf45bd81154eed9f176fca_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1098" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Category" selected="True" />
+            <SelectField field="ClusterID" selected="True" />
+            <SelectField field="City" selected="True" />
+            <SelectField field="Hospital Name" selected="True" />
+            <SelectField field="Distance.in.KMs" selected="True" />
+            <SelectField field="Sum.PCI.2014.Fact" selected="True" />
+            <SelectField field="Sum.PCI.2015.Fact" selected="True" />
+            <SelectField field="Sum.Forecast.2015.2Q" selected="True" />
+            <SelectField field="Sum.Forecast.2015..4Q" selected="True" />
+            <SelectField field="Latitude" selected="True" />
+            <SelectField field="Longitude" selected="True" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output26" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="6" Connection="Data Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="8" Connection="First Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="8" Connection="Second Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Reports" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Reports" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="True" />
+      <Destination ToolID="2" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Clean-DS-Geo-DistFromMoscow-Clusters</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
